@@ -207,8 +207,8 @@ foodArr = [
 // function filterByProperty = (property, number, type) => {
 //     if (type > 10) {
 //         console.log(`expensive`)
-    }
-}
+//     }
+// }
 
 // const bobsTotal = purchases
     // .filter(purchase => purchase.owner === "Bob")
