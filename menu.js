@@ -158,11 +158,16 @@ foodArr = [
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(tag => tag.tags = tag)
+function filteredFood(certainTag) {
+    foodArr.filter(certainTag)
+    return certainTag
+}
 
-// filteredFood(`dinner`)
+filteredFood(`dinner`)
 
 // const myStrongest = monstersInYourPocket.filter(monsterExtra => monsterExtra.CP > 200)
+// console.log(myStrongest)
+
 
 //////////////////PROBLEM 5////////////////////
 /* 
