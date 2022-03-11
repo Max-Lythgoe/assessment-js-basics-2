@@ -35,9 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((a, c) => a + c.price, 0)
 
-
+// console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -54,7 +54,12 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    total = (cartTotal * tax) + cartTotal - couponValue
+    console.log(total)
+}
 
+// calcFinalPrice(100, 10, .07)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,7 +84,9 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+ A resturaunt would need the customer's first name, last name, billing address, and phone number. The first and last name so they can categorize
+  it and save the data to the right customer. The Billing address is for using card payments or for delivery. And phone number is for delivery
+   updates and promotions to be sent via text or if they are in a rewards program.
 */
 
 /*
@@ -88,3 +95,12 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = [
+    {
+        firstName: 'Chuck',
+        lastName: 'Norris',
+        billAddress: '123 Oldbrook Lane, San Diego, CA 12543',
+        phone: 1233219874
+    }
+]

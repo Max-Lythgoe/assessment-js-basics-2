@@ -35,7 +35,7 @@ let pizza = {
     name: 'The Classic Pepperoni',
     price: 10,
     category: `entree`,
-    popularity: 5,
+    popularity: 4.5,
     rating: 4.3,
     tags: [`gluten-free`, `kids`]
 }
@@ -71,7 +71,7 @@ let pizza = {
 */
 
 //CODE HERE
-price = pizza.price
+const price = pizza.price
 // console.log(price)
 
 /*
@@ -82,7 +82,8 @@ price = pizza.price
 */
 
 //CODE HERE
-
+const category = pizza.category
+// console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -98,6 +99,49 @@ price = pizza.price
 
 //CODE HERE
 
+foodArr = [
+    {
+    name: 'Cheeseburger',
+    price: 5,
+    category: `entree`,
+    popularity: 4.8,
+    rating: 4.9,
+    tags: ['best seller', `dinner`]
+    },
+    {
+    name: 'Grilled Cheese',
+    price: 6,
+    category: `kids entree`,
+    popularity: 4,
+    rating: 4.2,
+    tags: [`gluten-free`, `kids`, `dinner`]
+    },
+    {
+    name: 'Chicken Wings',
+    price: 12,
+    category: `entree`,
+    popularity: 5,
+    rating: 4.9,
+    tags: [`best seller`, `dinner`]
+    },
+    {
+    name: 'Ice Cream',
+    price: 6,
+    category: `dessert`,
+    popularity: 5,
+    rating: 5,
+    tags: [`dessert`]
+    },
+    {
+    name: 'Spaghetti',
+    price: 11,
+    category: `entree`,
+    popularity: 3.5,
+    rating: 2.9,
+    tags: [`dinner`]
+    }
+
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -114,9 +158,11 @@ price = pizza.price
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+// const filteredFood = foodArr.filter(tag => tag.tags = tag)
 
+// filteredFood(`dinner`)
 
+// const myStrongest = monstersInYourPocket.filter(monsterExtra => monsterExtra.CP > 200)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -158,8 +204,14 @@ price = pizza.price
 */
 
 //CODE HERE
+// function filterByProperty = (property, number, type) => {
+//     if (type > 10) {
+//         console.log(`expensive`)
+    }
+}
 
-
+// const bobsTotal = purchases
+    // .filter(purchase => purchase.owner === "Bob")
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
