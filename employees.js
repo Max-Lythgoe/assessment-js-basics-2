@@ -65,8 +65,9 @@ let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 */
 
 //CODE HERE
-// const empTwo = (empOne...)
-
+let empTwo = {...empOne}
+empTwo.name = "Nick"
+// console.log(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -103,7 +104,7 @@ class Manager extends Employee{
     }
 
     addEmployee(emp){
-        this.employees = emp
+        this.employees.push(emp)
     }
 }
 
@@ -120,7 +121,7 @@ class Manager extends Employee{
 */
 
 //CODE HERE
-let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', 'Cece and Schmidt')
+let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', ['Cece', 'Schmidt'])
 
 /*
     Call the `getEmployees` method on the
@@ -128,7 +129,7 @@ let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', 'Ce
 */
 
 //CODE HERE
-// manager.getEmployees()
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -146,4 +147,4 @@ manager.addEmployee('Coach')
 */
 
 //CODE HERE
-manager.getEmployees
+manager.getEmployees()

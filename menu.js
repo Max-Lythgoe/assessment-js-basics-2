@@ -51,7 +51,7 @@ let pizza = {
 */
 
 //CODE HERE
-// console.log(pizza.name)
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -71,7 +71,7 @@ let pizza = {
 */
 
 //CODE HERE
-const price = pizza.price
+const {price} = pizza
 // console.log(price)
 
 /*
@@ -82,7 +82,7 @@ const price = pizza.price
 */
 
 //CODE HERE
-const category = pizza.category
+const {category} = pizza
 // console.log(category)
 
 //////////////////PROBLEM 3////////////////////
@@ -99,7 +99,7 @@ const category = pizza.category
 
 //CODE HERE
 
-foodArr = [
+let foodArr = [
     {
     name: 'Cheeseburger',
     price: 5,
@@ -119,7 +119,7 @@ foodArr = [
     {
     name: 'Chicken Wings',
     price: 12,
-    category: `entree`,
+    category: `appetizer`,
     popularity: 5,
     rating: 4.9,
     tags: [`best seller`, `dinner`]
@@ -133,7 +133,7 @@ foodArr = [
     tags: [`dessert`]
     },
     {
-    name: 'Spaghetti',
+    name: 'steak',
     price: 11,
     category: `entree`,
     popularity: 3.5,
@@ -158,15 +158,7 @@ foodArr = [
 
 //CODE HERE
 
-function filteredFood(certainTag) {
-    foodArr.filter(certainTag)
-    return certainTag
-}
-
-filteredFood(`dinner`)
-
-// const myStrongest = monstersInYourPocket.filter(monsterExtra => monsterExtra.CP > 200)
-// console.log(myStrongest)
+// const filteredFood = foodArr.filter(item => item.tags.incldudes(`dinner`))
 
 
 //////////////////PROBLEM 5////////////////////
@@ -209,14 +201,19 @@ filteredFood(`dinner`)
 */
 
 //CODE HERE
-// function filterByProperty = (property, number, type) => {
-//     if (type > 10) {
-//         console.log(`expensive`)
-//     }
-// }
+const filterByProperty = (property, number, type) => {
+    let filteredArr = foodArr.filter(item => {
+        if(type === 'above'){
+            return item[property] > number
+        } else {
+            return item[property] < number
+        }
+    })
+    return filteredArr
+}
 
-// const bobsTotal = purchases
-    // .filter(purchase => purchase.owner === "Bob")
+console.log(filterByProperty(`price`, 10, `below`))
+
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.

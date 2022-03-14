@@ -83,14 +83,14 @@ const canWeDeliver = (zipCode) => {
 // CODE HERE
 canWeDeliverTwo = (zipCode) => {
     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-        if (zipCode = deliveryAreaZipCodes[i]) {
-            console.log(`You're in the delivery zone!`)
-        } else {
-            console.log(`Sorry, we can't deliver to that address`)
-        }
+        if (deliveryAreaZipCodes[i] === zipCode) {
+            return console.log(`You're in the delivery zone!`)
+        } 
+           
+        } return console.log(`Sorry, we can't deliver to that address`)
     }
-}
 
+// canWeDeliverTwo(12532)
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -129,6 +129,8 @@ const deals = [
 // console.log(deals.title.replace(`15`, `10`))
 // // console.log(deals)
 
+deals[0].title = deals[0].title.replace(`15`, `10`)
+// console.log(deals)
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -142,7 +144,6 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
-deals.desc = deals.desc 
-deals.desc.replace(`March`, `April`)
-console.log(deals)
+// //CODE HERE
+
+deals[1] = deals[1].desc.replace(`March`, `April`).trim()
